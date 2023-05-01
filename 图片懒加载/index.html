@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://mockjs.com/dist/mock.js"></script>
+    <title>懒加载</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 通过mock模拟数据来创建所需的img
+        imgs = Mock.mock({
+            'img|200':['@image']
+        })
+        // 创建一个父节点
+        let images = document.createElement('div')
+        for(let i of imgs.img){
+            let cur = document.createElement('img')
+            // 懒加载的图片
+            cur.src = './img/lazy.webp'
+            // 绑定一个lazy属性
+            cur.classList.add('lazy')
+            // 真正的地址
+            cur.dataset.src = i
+            images.appendChild(cur)
+        }
+        // 将父元素插入到页面
+        document.body.appendChild(images)
+    </script>
+    <!--  传统方式 -->
+    <!-- <script src="./js/lazyLoad.js"></script> -->
+    <!-- intersectionObserve -->
+    <script src="./js/intersection.js"></script>
+</body>
+</html>
