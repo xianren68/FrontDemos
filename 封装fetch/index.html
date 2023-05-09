@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+
+<body>
+    <script type="module">
+        import Fetch from './Fetch.js'
+        let f = new Fetch('http://localhost:5000/v1')
+        // 测试
+        const get_test = async () => {
+            let res = await f.get('/user/list')
+            console.log(res)
+        }
+        const post_test = async () => {
+            let res = await f.post('/user/add', {
+                username: "闲人",
+                password: "12345",
+                role: 0
+            })
+            console.log(res)
+        }
+        get_test()
+        post_test()
+    </script>
+</body>
+
+</html>
