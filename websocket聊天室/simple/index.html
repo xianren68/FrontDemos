@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simpleRoom</title>
+</head>
+
+<body>
+    <input type="text">
+    <button>发送</button>
+    <div class="content"></div>
+    <script>
+        let connect = new WebSocket('ws://127.0.0.1:3000')
+        let btn = document.querySelector('button')
+        let input = document.querySelector('input')
+        let content = document.querySelector('.content')
+        // 定义状态常量
+        const ENTER = 0
+        const LEAVE = 1
+        const CHAT = 2
+        // 监听发送按钮,将输入框的信息发送到服务器
+        btn.addEventListener('click', () => {
+            connect.send(input.value)
+        })
+        connect.addEventListener('message', e => {
+            let newBox = document.createElement('div')
+            let data = JSON.parse(e.data)
+            let { type, msg, time } = data
+            if (type ===ENTER){
+                newBox.style.color='green'
+            }else if (type===LEAVE){
+                newBox.style.color='red'
+            }
+            newBox.innerHTML = msg+'-----'+time
+            content.appendChild(newBox)
+        })
+    </script>
+</body>
+
+</html>

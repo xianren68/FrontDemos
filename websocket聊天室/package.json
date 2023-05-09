@@ -1,0 +1,14 @@
+{
+  "name": "chatRoom",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "xianren",
+  "license": "MIT",
+  "type":"module",
+  "dependencies": {
+    "nodejs-websocket": "^1.7.2"
+  },
+  "scripts": {
+    "simple": "node ./simple/app.js"
+  }
+}
