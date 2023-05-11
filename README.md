@@ -29,4 +29,18 @@
 
 ### fetch
 下一代的ajax技术，模仿axios对其简单封装
+
 [link](./封装fetch)
+
+### sleep
+通过`async,await`以及定时器，实现一个休眠函数sleep
+因为通过定时器实现，所以只是大概的时间
+
+[link](./实现sleep)
+
+### websocket聊天室
+1. 通过nodejs-websocket实现一个极简聊天室
+[link](./websocket聊天室/simple)
+2. 通过socketio实现一个仿微信群的聊天室
+socketio的模式类似于发布订阅模式，注册事件与触发事件，触发事件时可以传入参数
+[link](./websocket聊天室/weChat)

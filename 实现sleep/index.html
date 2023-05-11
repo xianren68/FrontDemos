@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sleep</title>
+</head>
+<body>
+    <script type="module">
+        import sleep from './sleep.js'
+        async function test(){
+            let start = Date.now()
+            // 休眠一秒(大概)
+            await sleep(1000)
+            console.log(Date.now()-start) // 1052
+        }
+        test()
+    </script>
+</body>
+</html>

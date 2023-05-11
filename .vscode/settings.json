@@ -1,3 +1,4 @@
 {
-    "editor.fontFamily": "'Courier New', monospace"
+    "editor.fontFamily": "'Courier New', monospace",
+    "liveServer.settings.port": 5585
 }

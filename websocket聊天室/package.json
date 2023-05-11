@@ -4,11 +4,15 @@
   "main": "index.js",
   "author": "xianren",
   "license": "MIT",
-  "type":"module",
+  "type": "module",
   "dependencies": {
-    "nodejs-websocket": "^1.7.2"
+    "express": "^4.18.2",
+    "nodejs-websocket": "^1.7.2",
+    "socket.io": "^4.6.1",
+    "socketio": "^1.0.0"
   },
   "scripts": {
-    "simple": "node ./simple/app.js"
+    "simple": "node ./simple/app.js",
+    "wechat": "node ./weChat/app.js"
   }
 }

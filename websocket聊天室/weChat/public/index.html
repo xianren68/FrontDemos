@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>weChat</title>
+</head>
+<body>
+    <!-- 登录 -->
+    <div class="login">
+        <input type="text" placeholder="输入昵称" class="username">
+        <div>请选择头像</div>
+        <div class="avatar">
+            <div class="select">
+                <img src="./img/1.jpg" alt="">
+            </div>
+            <div>
+                <img src="./img/2.jpg" alt="">
+            </div>
+            <div>
+                <img src="./img/3.jpg" alt="">
+            </div>
+            <div>
+                <img src="./img/4.jpg" alt="">
+            </div>
+            <div>
+                <img src="./img/5.jpg" alt="">
+            </div>
+            <div>
+                <img src="./img/6.jpg" alt="">
+            </div>
+            <div>
+                <img src="./img/7.jpg" alt="">
+            </div>
+            <div>
+                <img src="./img/8.jpg" alt="">
+            </div>
+            <div>
+                <img src="./img/9.jpg" alt="">
+            </div>
+            <div>
+                <img src="./img/10.jpg" alt="">
+            </div>
+        </div>
+        <button class="log-btn">登录</button>
+        </div>
+    <!-- 聊天页 -->
+    <div class="chat unShow">
+        <div class="left">
+            <div class="myself">
+            </div>
+            <div class="userlist"></div>
+        </div>
+        <div class="right">
+            <div class="top">
+            </div>
+            <div class="main"></div>
+            <div class="bottom">
+                <textarea></textarea>
+                <button class="send">发送</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src='./js/index.js'></script>
+</body>
+</html>
