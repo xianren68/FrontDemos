@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>v-model</title>
+    <style>
+        .input {
+            height: 20px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        const {createApp,h,reactive} = Vue
+        let App = {
+            setup(props,context) {
+                // 响应式数据
+                let a = reactive({
+                    name:'xianren',
+                    age:21,
+                })
+                // input方法，让输入框内的字符变化时，与它绑定的数据也发生变化
+                let model = (e)=>{
+                    a.name = e.target.value
+                }
+                // 返回数据
+                return {
+                    a,
+                    model
+                }
+
+            },
+            // 渲染函数
+            render(proxy){
+                    return h('input',{class:'input',oninput:proxy.model,value:proxy.a.name})
+                }
+        }
+        let app = createApp(App)
+        app.mount('#app')
+    </script>
+</body>
+</html>

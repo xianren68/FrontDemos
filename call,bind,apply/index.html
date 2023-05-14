@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>point</title>
+</head>
+<body>
+    <script type="module">
+        import {myCall,myApply,myBind} from './point.js'
+        Function.prototype.myCall = myCall
+        Function.prototype.myApply = myApply
+        Function.prototype.myBind = myBind
+        // 拥有方法的对象
+        let test = {
+            name:'xianren',
+            age:21,
+            // 一个方法
+            t(a,b){
+                console.log(this.name+a+b)
+            }
+        }
+        // 没有方法的对象
+        let target = {
+            name:'xiaoli'
+        }
+        // 修改this指向
+        test.t.myCall(target,1,2) // xiaoli12
+        test.t.myApply(target,[1,2]) // xiaoli12
+        let f = test.t.myBind(target,1) // xiaoli12
+        f(2)
+    </script>
+</body>
+</html>
