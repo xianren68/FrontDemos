@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>debounce,throttle</title>
+</head>
+<body>
+    <button class="one"></button>
+    <button class="two"></button>
+    <script type="module">
+        import debounce from './debounce.js'
+        import throttle from './throttle.js'
+        let one = document.querySelector('.one')
+        let two = document.querySelector('.two')
+        function eve(){
+            console.log(111)
+        }
+        one.addEventListener('click',debounce(eve,3000))
+        two.addEventListener('click',throttle(eve,3000))
+    </script>
+</body>
+</html>
