@@ -1,3 +1,5 @@
+<!-- 分页器组件 -->
+
 <template>
   <div class="page">
       <ul class="pagination">
@@ -18,7 +20,7 @@
 </template>
 
 <script setup>
-import { defineProps,computed ,defineEmits} from 'vue'
+import {computed} from 'vue'
 // 获取props
 const props = defineProps(['pageNum','total','onPage','continues'])
 // 获取自定义事件

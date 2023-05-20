@@ -1,0 +1,16 @@
+/* 定义css变量 */
+/* light */
+:root {
+    --text--color:#000;
+    --bg1:#fff;
+}
+/* dark */
+html[data-theme="dark"]{
+    --text--color: #fff; /* text color */
+    --bg1: #320754eb; /* background color */
+}
+html,body,#app {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
