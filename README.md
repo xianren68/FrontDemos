@@ -107,3 +107,14 @@ bind会返回一个函数，不会立即执行
 在使用到背景色等时,我们用变量代替,切换主题时直接切换整个变量内容即可
 
 [link](./theme switch/src/theme.css)
+
+
+### 数组扁平化
+将嵌套的数组转化为一维数组，js中有Array.flat方法可以实现，接收两个参数，一个为嵌套的数组，一个为展开的层数
+手动实现
+
+[link]('./数组扁平化')
+
+leetcode:https://leetcode.cn/problems/flatten-deeply-nested-array/
+
+> push性能比concat好，用concat拼接会超时
