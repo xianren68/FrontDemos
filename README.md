@@ -113,8 +113,18 @@ bind会返回一个函数，不会立即执行
 将嵌套的数组转化为一维数组，js中有Array.flat方法可以实现，接收两个参数，一个为嵌套的数组，一个为展开的层数
 手动实现
 
-[link]('./数组扁平化')
+[link](./数组扁平化)
 
 leetcode:https://leetcode.cn/problems/flatten-deeply-nested-array/
 
 > push性能比concat好，用concat拼接会超时
+
+### 函数柯里化
+柯里化就是只传递给函数**一部分参数**来调用它，让它返回一个函数去处理剩余的参数。
+
+本质上是闭包的应用，在外层函数中将参数的数量保存起来，如果参数数量与传入的函数参数一致，则执行传入函数
+如果不一致，则返回内部函数继续接收参数
+
+[link](./函数柯里化)
+
+leetcode:https://leetcode.cn/problems/curry/
