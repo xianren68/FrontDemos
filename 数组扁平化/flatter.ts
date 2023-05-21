@@ -13,16 +13,16 @@ function flatter<T>(arr:Array<any>){
     return res
 }
 // 可控制深度的扁平化
-function flat<T>(arr:Array<any>,n:number):Array<T>{
+function flat(arr:Array<any>,n:number):Array<any>{
     // 层数为0,直接返回
     if(n <= 0){
         return arr
     }
-    let res:Array<T> = []
+    let res:Array<any> = []
     for(let i of arr){
         if(i instanceof Array){
             // 层数减1
-            let r = flat<T>(i,n-1)
+            let r = flat(i,n-1)
             res.push(...r)
         }else {
             res.push(i)
@@ -34,4 +34,4 @@ function flat<T>(arr:Array<any>,n:number):Array<T>{
 // example
 let t1 = [1,[2,3,4],5,6,[7,8,9,[10,11,12,[13,14]]],15]
 console.log(flatter<number>(t1))
-console.log(flat<number>(t1,2))
+console.log(flat(t1,1))
