@@ -128,3 +128,22 @@ leetcode:https://leetcode.cn/problems/flatten-deeply-nested-array/
 [link](./函数柯里化)
 
 leetcode:https://leetcode.cn/problems/curry/
+
+### 分组 
+通过传入函数运行的结果，结果相同的分为一组，返回分组后的对象
+遍历数组每一项，放到函数中执行，判断结果是否在对象中，如果已存在，则添加到数组
+如果不存在，则创建对应的数组，并将当前项加入
+
+[link](./分组)
+
+leetcode:https://leetcode.cn/problems/group-by/
+
+### 记忆函数
+接收一个函数作为参数，同时返回一个记忆函数，给记忆函数传入参数，如果是第一次执行，会调用原函数执行，将结果缓存并返回出去
+如果是前面传入过的参数，则直接返回缓存的结果。
+本质上扔然是闭包的应用，用hash表将执行结果存起来，遇到相同的参数返回即可
+
+[link](./记忆函数)
+
+leetcode:https://leetcode.cn/problems/memoize/
+
