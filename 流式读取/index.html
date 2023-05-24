@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stream</title>
+</head>
+<body>
+    <script type="module">
+        import {Xhr,Fetch} from './stream.js'
+        Xhr('https://micro.atmob.com/pc/chatgpt/v1/ai/chat/stream',{
+            chat_completion_messages:[{time_stamp: 1684921520902, role: "user", content: "go和rust的异同"}],
+            token: "CZgn553+rz4EQ7hsOKj+nVKErbNkgZ5MnNjD4o/Sh539cqW8u7CsWX/3Lj47niMBoqRT2zEZdsks58x3/YqxLYWYx6BKbP1TnxAVkWSYg68PjiKRqYQyJht0C29yklfq7IhjV7ZvVOD8MrnxqECJxeyCgvl6pZLObL7+0P0="
+        })
+        // Fetch('https://micro.atmob.com/pc/chatgpt/v1/ai/chat/stream',{
+        //     chat_completion_messages:[{time_stamp: 1684921520902, role: "user", content: "go和rust的异同"}],
+        //     token: "CZgn553+rz4EQ7hsOKj+nVKErbNkgZ5MnNjD4o/Sh539cqW8u7CsWX/3Lj47niMBoqRT2zEZdsks58x3/YqxLYWYx6BKbP1TnxAVkWSYg68PjiKRqYQyJht0C29yklfq7IhjV7ZvVOD8MrnxqECJxeyCgvl6pZLObL7+0P0="
+        // })
+    </script>
+</body>
+</html>
