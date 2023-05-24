@@ -11,6 +11,15 @@ function compose(){
         return result
     }
 }
+function compose1(){
+    let args = [...arguments]
+    return function(x){
+        // 通过reduce来完成函数合成
+        return args.reduce(function(pre,cur){
+            return cur(pre)
+        },x)
+    }
+}
 // test
 function a(x){
     return x*10
@@ -22,4 +31,5 @@ function c(x){
     return x/10
 }
 let result = compose(a,b,c)(10)
-console.log(result)
+let result1 = compose1(a,b,c)(10)
+console.log(result,result1)
