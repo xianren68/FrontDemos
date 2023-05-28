@@ -165,5 +165,10 @@ leetcode:https://leetcode.cn/problems/memoize/
 
 leetcode:https://leetcode.cn/problems/differences-between-two-objects/
 
+### 歌词滚动效果
+监听audio事件，让歌词随着时间滚动
+
+[link](./歌词滚动效果)
+
    
 
