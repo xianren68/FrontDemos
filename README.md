@@ -176,5 +176,11 @@ leetcode:https://leetcode.cn/problems/differences-between-two-objects/
 
 [link](./fetch超时)
 
+### js函数重载
+利用js函数是对象的属性往函数上添加一个用于收集重载函数及其参数的函数，将参数通过字符串的形式存储到hash表中
+在执行时通过传入的参数获取重载的函数执行
+
+[link](./js函数重载)
+
    
 
