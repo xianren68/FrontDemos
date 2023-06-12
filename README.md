@@ -174,5 +174,7 @@ leetcode:https://leetcode.cn/problems/differences-between-two-objects/
 定义一个函数接收定时时间，返回一个遵循这个定时时间的fetch函数（闭包）
 定时通过返回新的promise完成，如果请求在一定时间内未完成，则将返回的Promise设为失败,并中断请求
 
+[link](./fetch超时)
+
    
 
