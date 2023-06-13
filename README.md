@@ -182,5 +182,10 @@ leetcode:https://leetcode.cn/problems/differences-between-two-objects/
 
 [link](./js函数重载)
 
+### 大整数相加
+传入两个整数字符串，将它们的值相加后作为字符串返回
+
+[link](./大整数相加)
+
    
 
