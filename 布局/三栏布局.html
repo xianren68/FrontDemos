@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三栏布局</title>
+</head>
+<style>
+    html,body,main {
+        height: 100%;
+    }
+    /* 1.定位 两边绝对定位，中间用margin 来实现不重叠*/
+    /* main {
+        position: relative;
+    }
+    .left {
+        position: absolute;
+        left: 0;
+        top:0;
+        height: 100%;
+        width: 200px;
+        background-color: aqua;
+    }
+    .center {
+        margin-left: 200px;
+        margin-right: 200px;
+        height: 100%;
+        background-color: black;
+    }
+    .right {
+        position: absolute;
+        right: 0;
+        top:0;
+        bottom:0;
+        width: 200px;
+        background-color: blue;
+    } */
+    /* 2.flex,左右定宽，中间伸展*/
+    /* main {
+        display: flex;
+    }
+    .left {
+        width: 200px;
+        background-color: aqua;
+    }
+    .center {
+        flex:1;
+        background-color: #008c8c;
+    }
+    .right {
+        width: 200px;
+        background-color: antiquewhite;
+    } */
+    /* 3.浮动，左右浮动，中间用margin来防止重叠，注意：center一定要放在最后，因为块元素会默认放到浮动元素的底下
+    如果将center放在中间的位置，浮动元素就会因为前面有个块元素而另起一行 */
+    /* .left {
+        float: left;
+        width: 200px;
+        height: 100%;
+        background-color: aquamarine;
+
+    }
+    .right {
+        float: right;
+        width: 200px;
+        height: 100%;
+        background-color: aquamarine;
+    }
+    .center {
+        margin: 0 200px;
+        background-color: black;
+        height: 100%;
+    } */
+    /* 4.圣杯布局  通过浮动加定位，利用浮动和负边距来实现。父级元素设置左右的 padding，三列均设置向左浮动，
+    中间一列放在最前面，宽度设置为父级元素的宽度，因此后面两列都被挤到了下一行，通过设置 margin 负值将其移动到上一行
+    ，再利用相对定位，定位到两边。
+    注意：margin-left设为负即可让浮动元素回到上一行*/
+    /* main {
+        padding: 0 300px;
+    }
+    .center {
+        width: 100%;
+        height: 100%;
+        float:left;
+        background-color: aqua;
+    }
+    .left {
+        float:left;
+        margin-left:-300px;
+        position: relative;
+        left:-100%;
+        width: 300px;
+        height: 100%;
+        background-color: aquamarine;
+
+    }
+    .right {
+        float:left;
+        margin-left:-300px;
+        position:relative;
+        left:300px;
+        width: 300px;
+        height: 100%;
+        background-color: blue;
+    } */
+    /* 5.双飞翼布局 ,双飞翼布局相对于圣杯布局来说，左右位置的保留是通过中间列的 margin 值来实现的，
+    而不是通过父元素的 padding 
+    来实现的。本质上来说，也是通过浮动和外边距负值来实现的*/
+    /* .center {
+        margin: 0 300px;
+        float:left;
+        width: calc(100% - 600px);
+        height: 100%;
+        background-color: black;
+    }
+    .left {
+        float:left;
+        margin-left: -100%;
+        width: 300px;
+        height: 100%;
+        background-color: aquamarine;
+
+    }
+    .right {
+        float: left;
+        margin-left: -300px;
+        width: 300px;
+        height: 100%;
+        background-color: rgb(127, 153, 255);
+        
+    } */
+
+</style>
+<body>
+    <main>
+        <!-- <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div> -->
+        <!-- 浮动布局 -->
+        <!-- <div class="left"></div>
+        <div class="right"></div>
+        <div class="center"></div> -->
+        <!-- 圣杯布局 -->
+        <div class="center"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+    </main>
+</body>
+</html>

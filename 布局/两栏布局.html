@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>两栏布局</title>
+    <style>
+        html,body,main {
+            height: 100%;
+        }
+        /* 1.左边左浮动，右边通过设置margin-left来与浮动区域不重叠 */
+        /* .left{
+            width: 400px;
+            float: left;
+            height: 100%;
+            background-color: aqua;
+        }
+        .right {
+            height: 100%;
+            margin-left: 400px;
+            background-color: blue;
+        } */
+        /* 2.左边浮动，右边设置overflow:hidden形成bfc*/
+        /* .left{
+            width: 400px;
+            float: left;
+            height: 100%;
+            background-color: aqua;
+        }
+        .right {
+            height: 100%;
+            overflow:hidden;
+            background-color: blue;
+        } */
+        /* 3. 弹性盒*/
+        /* main{
+            display:flex;
+        }
+        .left{
+            width: 400px;
+            background-color: aqua;
+        }
+        .right{
+            flex-grow: 1;
+            background-color: blue;
+        } */
+        /* 4.定位 父级相对定位，左侧绝对定位，类似于浮动，都是脱离文档流+margin来实现元素不重叠*/
+   /*  main {
+        position: relative;
+    }
+    .left {
+        position: absolute;
+        width: 400px;
+        height: 100%;
+        background-color: aqua;
+    }
+    .right {
+        margin-left: 400px;
+        width: auto;
+        background-color: aquamarine;
+        height: 100%;
+    } */
+    /* 5.定位,给右边绝对定位，用left不使左右重叠，用其他方向为零，实现宽度，高度自适应 */
+    main {
+        position: relative;
+    }
+    .left {
+        width: 400px;
+        height: 100%;
+        background-color: aqua;
+    }
+    .right {
+        position: absolute;
+        left: 400px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: auto;
+        background-color: aquamarine;
+    } 
+
+
+    </style>
+</head>
+<body>
+    <!-- 两栏布局，左边宽度固定，右边自适应 -->
+    <main>
+        <div class="left"></div>
+        <div class="right"></div>
+    </main>
+</body>
+</html>

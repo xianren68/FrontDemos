@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垂直水平居中</title>
+    <style>
+        
+        /* .outer{
+            width: 500px;
+            height: 500px;
+            position: relative;
+            background-color: aqua;
+        }
+        /* 1.绝对定位加transfrom */
+        /* .inner {
+            width:200px;
+            height: 200px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            background-color: blue;
+
+        } */
+        /* 2.绝对定位加margin填充 */
+            /* .inner {
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top:0;
+                left: 0;
+                right: 0;
+                bottom:0;
+                margin: auto;
+                background-color: blue;
+            }  */
+        /* flex布局 */
+        .outer{
+            width: 500px;
+            height: 500px;
+            display: flex;
+            background-color: aqua;
+            justify-content: center;
+            align-items: center;
+        }
+        .inner {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            12345
+        </div>
+    </div>
+</body>
+</html>
