@@ -85,18 +85,6 @@ bind会返回一个函数，不会立即执行
 
 [link](./订阅发布模式)
 
-### vue组件
-#### 分页器组件
-###### 需要的数据
-1. `onPage`,当前页
-2. `total`,总数据条数
-3. `continues`,分页器连续页码的个数
-4. `pageNum`,每页的数据个数
-5. `getPageon()`页码发生改变时触发的函数（自定义），接收参数为当前选中页码
-通过父级传递参数来定制分页器组件的具体形式，并且通过自定义函数来让分页器组件向父组件传递数据（点击的是哪个组件）
-
-[link](./vue组件/pagination)
-
 ### 函数合成(快手二面)
 令compose(fn,...f3,f2,f1)(x) 等价于 fn(...f3(f2(f1(x))))
 
@@ -187,5 +175,6 @@ leetcode:https://leetcode.cn/problems/differences-between-two-objects/
 
 [link](./大整数相加)
 
-   
+### 使用生成器和promise模仿async await
 
+[link](./asyncawait)
